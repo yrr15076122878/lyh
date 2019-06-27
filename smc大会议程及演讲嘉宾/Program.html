@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_cn" lang="zh_cn">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="zh_cn" />
+		<meta name="renderer" content="webkit" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=640, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/Navigation.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" href="http://www.wnevc.org.cn/css/bootstrap.min.css">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="http://www.wnevc.org.cn/js/bootstrap.min.js"></script>
+		<title>SMC-演讲嘉宾</title>
+		<style>
+			.a-b-link {
+				position: fixed;
+				z-index: -1;
+				top: -500px;
+			}
+		</style>
+	</head>
+
+	<body class="action--site-news controller--site">
+		<div class="container" id="page">
+			<form method="post" action="speakerinformation" id="form1">
+				<style>
+					.w-a {
+						font-size: 22px;
+						color: #333;
+						line-height: 40px;
+						margin-right: 30px;
+					}
+				</style>
+				<div class="pageinner">
+					<style>
+						.big-link_1 {
+							display: block;
+							width: 50px;
+							height: 50px;
+							line-height: 50px;
+							background: url('http://wnevc.com/img/1.png') center center no-repeat;
+							background-size: 50%;
+						}
+						
+						.dark-img {
+							background: url('http://wnevc.com/img/1.png') center center no-repeat;
+							background-size: 50%;
+						}
+						
+						.light-img {
+							background: url('http://wnevc.com/img/2.png') center center no-repeat;
+							background-size: 50%;
+						}
+						
+						.light-color {
+							background-color: #fff;
+						}
+						
+						.modal-size {
+							width: 60%;
+							height: 60%;
+						}
+						
+						@media screen and (max-width: 1350px) {
+							.top-active {
+								width: 100%;
+								position: fixed;
+								left: 0;
+								top: 25px;
+								z-index: 3;
+								visibility: hidden;
+								background: url(../images/index_bg_nav.png) no-repeat;
+								background-size: cover;
+							}
+						}
+					</style>
+
+					<div class="inside_content">
+
+						<div class="inside_right">
+							<div class="inside_right_title">演讲嘉宾</div>
+							<div class="news_wrap">
+								<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+								<style type="text/css">
+									
+									.pull-cont {
+										overflow: hidden;
+									}
+									
+									.big-link {
+										text-decoration: none;
+										background-color: #f7f7f7;
+										border-radius: 10px;
+										width: 15%;
+										height: 19rem;
+										padding-bottom: 5px;
+										display: block;
+										float: left;
+										margin: 2.5%;
+										overflow: hidden;
+										cursor: pointer;
+									}
+									
+									.name-header {
+										height: 13rem;
+										font-weight: bold;
+									}
+									
+									.big-link,
+									.big-link:hover {
+										text-decoration: none;
+										color: #333;
+									}
+									
+									.big-link img {
+										width: 100%;
+										display: block;
+										border-radius: 5px;
+									}
+									
+									.big-link p {
+										margin: 5px auto;
+										text-align: center;
+										width: 100%;
+									}
+									
+									.big-link p:last-child,
+									.font_normal {
+										font-weight: normal;
+									}
+									
+									.modal-header {
+										border-bottom: none;
+										padding: 0;
+										padding-right: 1rem;
+									}
+									
+									.modal-body p:first-child {
+										text-align: center;
+										font-size: 20px;
+									}
+									/* =======================媒体查询========================*/
+									
+									@media screen and (max-width:576px) {
+										.big-link {
+											border-radius: 5px;
+											width: 100%;
+											height: 19rem;
+											font-size: 14px;
+											margin: 2% auto;
+										}
+										.big-link img {
+											width: 80%;
+											margin: 0 auto;
+											border-radius: 2px;
+										}
+										.big-link p {
+											width: 80%;
+											margin: 4px auto;
+											line-height: 1.2;
+										}
+									}
+								</style>
+								<style type="text/css">
+									.line_h {
+										margin-bottom: 30px;
+										margin-top: 0;
+									}
+									
+									.line_h:last-child {
+										margin-bottom: 0;
+										margin-top: 30px;
+									}
+									
+									#title_tab {
+										width: 100%;
+										overflow: hidden;
+										margin-bottom: 10px;
+										display: flex;
+										justify-content: space-around;
+										flex-direction: row;
+										flex-wrap: wrap;
+									}
+									
+									#content_tab {
+										width: 100%;
+									}
+									
+									#title_tab>div {
+										display: flex;
+										width: 30%;
+										justify-content: space-around;
+										cursor: pointer;
+										border-radius: 5px;
+										color: #FFFFFF;
+										background-color: #129693;
+										padding: 10px 0;
+										font-weight: 900;
+									}
+									
+									#title_tab>.title_tab_active {
+										background-color: #19d2cc;
+									}
+									
+									#content_tab>div {
+										width: 100%;
+										left: 0;
+										top: 0;
+										min-height: 250px;
+										display: none;
+									}
+									
+									#content_tab>div:nth-child(1) {
+										display: block;
+									}
+									
+									.pull-div {
+										padding-bottom: 20px;
+									}
+									
+									.pull-cont {
+										display: none;
+										background: #FFFFFF;
+										padding: 10px;
+										line-height: 25px;
+										font-weight: 700;
+									}
+									
+									.pull-tit {
+										position: relative;
+										width: 90%;
+										border-bottom: 1px dashed #333333;
+										cursor: pointer;
+										font-weight: 700;
+									}
+									
+									.pull-tit span {
+										position: absolute;
+										top: 15px;
+										right: 15px;
+										display: block;
+										width: 0;
+										height: 0;
+										border-width: 8px 8px 0;
+										border-style: solid;
+										border-color: #333 transparent transparent;
+										transition: all 1s linear;
+									}
+									
+									.pull-tit .span-active {
+										transform: rotateX(180deg);
+									}
+									
+									#title_tabs {
+										width: 100%;
+										overflow: hidden;
+										margin-bottom: 10px;
+										display: flex;
+										justify-content: space-around;
+										flex-direction: row;
+										flex-wrap: wrap;
+										margin-bottom: 20px;
+									}
+									
+									#title_tabs>div {
+										display: flex;
+										width: 40%;
+										justify-content: space-around;
+										cursor: pointer;
+										border-radius: 5px;
+										color: #FFFFFF;
+										background-color: #129693;
+										padding: 10px 0;
+										font-weight: 900;
+									}
+								</style>
+								<div class="inside_content">
+									<div class="inside_right">
+										<div class="news_wrap">
+											<div id="title_tabs">
+
+												<div class="index-cy-attend" style="background-color: rgb(192,0,0);">
+													<a href="http://m.wnevc.com" target="_blank" style="text-decoration: none; color: white; width: 100%; text-align: center;">我要报名参会</a>
+												</div>
+											</div>
+											<div id="title_tab">
+												<div>
+													7月1日
+												</div>
+												<div class="title_tab_active">
+													7月2日
+												</div>
+												<div>
+													7月3日
+												</div>
+											</div>
+											<div id="content_tab">
+												<div class="div-tab" style="display: none;">
+													<table border="0" cellpadding="0" cellspacing="6" style="font-weight: 900;" width="100%">
+														<tbody>
+															<tr>
+																<td style="background-color: #0099d2; padding: 15px; color: #FFFFFF;">7月1日 | 周一
+																</td>
+															</tr>
+															<tr>
+																<td style="background-color: #f2f2f2; padding: 15px; color: #333333; line-height: 40px;">
+																	<span style="font-weight: 700;">13:30-17:00 </span>
+																	<div class="pull-div">
+																		<div class="pull-tit">主题峰会1：全球汽车制造商战略转型与创新发展</div>
+																		<!--隐藏显示部分-->
+																		<div data-s="0" class="pull-cont" style="display: none;">
+																			<p>（*按嘉宾参会确认时间排序）</p>
+																			<div class="box" style="overflow: hidden;">
+																				<!-- 按钮：用于打开模态框 -->
+																				<a class="big-link name-header" data-toggle="modal" data-target="#myModal49">
+																					<img src="http://www.wnevc.org.cn/img/Lee Hyukjoon.jpg">
+																					<p>李赫埈</p>
+																				</a>
+																				<!-- 模态框 -->
+																				<div class="modal fade" id="myModal49">
+																					<div class="modal-dialog  modal-dialog-centered modal-lg">
+																						<div class="modal-content">
+																							<!-- 模态框头部 -->
+																							<div class="modal-header">
+																								<button type="button" class="close" data-dismiss="modal">×</button>
+																							</div>
+																							<!-- 模态框主体 -->
+																							<div class="modal-body">
+																								<p>李赫埈</p>
+																								<p>【公司职务】现代汽车集团（中国）副总经理</p>
+																								<p>【个人简介】</p>
+																								<p class="font_normal">
+																									中国人民大学商学院博士
+																									<br>美国福特汉姆大学工商管理硕士（北京大学国际MBA）
+
+																									<br>吉林大学经济管理学院学士
+
+																									<br>现代汽车集团（中国）副总经理
+
+																									<br>现代汽车（中国）投资有限公司总经理
+
+																									<br>现代汽车（中国）投资有限公司常务副总经理
+
+																									<br>现代汽车（中国）投资有限公司政策企划室 副总经理
+
+																									<br>现代汽车集团秘书长及中国事业本部投资规划担当理事
+																								</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="div-tab div_tab_active" style="display: block;">
+													<table border="0" cellpadding="0" cellspacing="6" style="font-weight: bold;" width="100%">
+														<tbody>
+															<tr>
+																<td style="padding: 15px; background-color: #129693; color: #FFFFFF;">7月2日 | 周二
+																</td>
+															</tr>
+															<tr>
+																<td style="background-color: #f2f2f2; padding: 15px; color: #333333; line-height: 40px; overflow: hidden;">
+																	08:30-17:30
+																	<br>
+																	<div class="pull-div">
+																		<div class="pull-tit">全体大会 <span data-t="1"></span></div>
+																		<!--隐藏显示部分-->
+																		<div data-s="1" class="pull-cont" style="display: block;">
+																			<p style="text-align: left; width: 100%;">（*按嘉宾参会确认时间排序）</p>
+																			<!-- 按钮：用于打开模态框 -->
+																			<a id="A5" class="big-link" data-toggle="modal" data-target="#myModal2">
+																				<img src="http://www.wnevc.org.cn/img/wangang.jpg">
+																				<p>万钢</p>
+																				<p>全国政协副主席，中国科协主席，世界新能源汽车大会主席</p>
+																			</a>
+																			<!-- 模态框 -->
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="div-tab" style="display: none;">
+													<table border="0" cellpadding="0" cellspacing="6" style="font-weight: 900;" width="100%">
+														<tbody>
+															<tr>
+																<td style="width: 100%; color: #FFFFFF; padding: 15px; background-color: #19d2cc;">
+																	7月3日 | 周三
+																</td>
+															</tr>
+															<tr>
+																<td style="width: 100%; color: #333333; padding: 15px; background-color: #f1f1f1; line-height: 40px;">
+																	09:00-12:00
+																	<div class="pull-div">
+																		<div class="pull-tit">主题峰会4：氢能及燃料电池技术创新</div>
+																		<!--显示隐藏部分-->
+																		<div data-s="0" class="pull-cont" style="">
+																			<p>（*按嘉宾参会确认时间排序）</p>
+																			<div class="box" style="overflow: hidden;">
+																				<!-- 按钮：用于打开模态框 -->
+																				<a id="A13" class="big-link name-header" data-toggle="modal" data-target="#myModal78">
+																					<img src="http://www.wnevc.org.cn/img/yuzhuoping.jpg">
+																					<p>余卓平</p>
+																				</a>
+																				<!-- 模态框 -->
+																				<div class="modal fade" id="myModal78">
+																					<div class="modal-dialog  modal-dialog-centered modal-lg">
+																						<div class="modal-content">
+																							<!-- 模态框头部 -->
+																							<div class="modal-header">
+																								<button type="button" class="close" data-dismiss="modal">×</button>
+																							</div>
+																							<!-- 模态框主体 -->
+																							<div class="modal-body">
+																								<p>余卓平</p>
+																								<p class="noblod">同济大学教授</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	09:00-12:30
+																	<div class="pull-div">
+																		<div class="pull-tit">主题峰会6：自动驾驶与城市未来出行</div>
+																		<div data-s="0" class="pull-cont" style="">
+																			<p>（*按嘉宾参会确认时间排序）</p>
+																			<div class="box" style="overflow: hidden;">
+																				<!-- 按钮：用于打开模态框 -->
+																				<a id="A13" class="big-link name-header" data-toggle="modal" data-target="#myModal81">
+																					<img src="http://www.wnevc.org.cn/img/likeqiang.jpg">
+																					<p>李克强</p>
+																				</a>
+																				<!-- 模态框 -->
+																				<div class="modal fade" id="myModal81">
+																					<div class="modal-dialog  modal-dialog-centered modal-lg">
+																						<div class="modal-content">
+																							<!-- 模态框头部 -->
+																							<div class="modal-header">
+																								<button type="button" class="close" data-dismiss="modal">×</button>
+																							</div>
+																							<!-- 模态框主体 -->
+																							<div class="modal-body">
+																								<p>李克强</p>
+																								<p class="noblods">清华大学教授</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	13:30-17:00
+																	<div class="pull-div">
+																		<div class="pull-tit">主题峰会9：先进电驱动技术</div>
+																		<div data-s="1" class="pull-cont">
+																			<p>（*按嘉宾参会确认时间排序）</p>
+																			<div class="box" style="overflow: hidden;">
+																				<!-- 按钮：用于打开模态框 -->
+																				<a id="A13" class="big-link name-header" data-toggle="modal" data-target="#myModal59">
+																					<img src="http://www.wnevc.org.cn/img/sunfengchun.jpg">
+																					<p>孙逢春</p>
+																				</a>
+																				<!-- 模态框 -->
+																				<div class="modal fade" id="myModal59">
+																					<div class="modal-dialog  modal-dialog-centered modal-lg">
+																						<div class="modal-content">
+																							<!-- 模态框头部 -->
+																							<div class="modal-header">
+																								<button type="button" class="close" data-dismiss="modal">×</button>
+																							</div>
+																							<!-- 模态框主体 -->
+																							<div class="modal-body">
+																								<p>孙逢春</p>
+																								<p>【公司职务】 中国工程院院士、北京理工大学教授</p>
+																								<p>【个人简介】</p>
+																								<p class="font_normal">
+																									孙逢春，中国工程院院士，北京理工大学教授， “长江学者”特聘教授。长期致力于节能与新能源车辆系统研究、关键技术开发、产业化与推广应用，先后获国家技术发明二等奖2项、国家科技进步二等奖1项、获得发明专利授权近60项、发表论文200余篇，学术他引6000余次。曾获“全国劳动模范”、 “全国优秀教师”、 “科技奥运先进个人”等荣誉称号。
+																								</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='modal fade' id='myModal2'>
+									<div class='modal-dialog  modal-dialog-centered  modal-lg'>
+										<div class='modal-content'>
+											<!-- 模态框头部 -->
+											<div class='modal-header'>
+												<button type='button' class='close' data-dismiss='modal'>×</button>
+											</div>
+											<!-- 模态框主体 -->
+											<div class='modal-body'>
+												<p>万钢</p>
+												<p class='font_normal'>全国政协副主席，中国科协主席，世界新能源汽车大会主席</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ss">
+									
+								</div>
+								<!--循环部分 及效果部分-->
+								<script type="text/javascript">
+									for(var i = 0; i < 2; i++) {
+										var $a = $("<table border='0' cellpadding='0' cellspacing='6' style='font-weight: 900;' width='100%'></table>")
+										var $a2 = $("<tbody class='body-in'></tbody>");
+										var $a3 = $("<tr></tr>");
+										var $a4 = $("<td style='background-color: #f2f2f2; padding: 15px; color: #333333; line-height: 40px;'>时间地点：7月1日，19:00-21:30，亚洲论坛国际会议中心一楼东屿宴会厅B</td>");
+										var $a5 = $("<div class='pull-div'></div>");
+										var $a6 = $("<div class='pull-tit'>闭门会议：政策制定者、国际组织首脑及全球汽车制造商首脑闭门会 <span data-t='1'></span></div><div data-s='1'class='pull-cont'><div data-s='1' class='pull-cont' style='display: block;'><a id='A5' class='big-link' data-toggle='modal' data-target='#myModal"+i+"'><img src='http://www.wnevc.org.cn/img/wangang.jpg'><p>万钢</p><p>全国政协副主席，中国科协主席，世界新能源汽车大会主席</p></a></div></div>");
+										$a.append($a2.append($a3.append($a4.append($a5.append($a6)))));
+										$(".div-tab").append($a);
+									}
+									
+									for(var i = 0; i < 2; i++) {
+										var $s1 = $("<div class='modal fade' id='myModal" + i + "'></div>");
+										var $s2 = $("<div class='modal-dialog  modal-dialog-centered  modal-lg'></div>");
+										var $s3 = $("<div class='modal-content'></div>");
+										var $s4 = $("<div class='modal-header'><button type='button' class='close' data-dismiss='modal'>×</button></div><div class='modal-body'><p>万钢111</p><p class='font_normal'>全国政协副主席，中国科协主席，世界新能源汽车大会主席</p></div>");
+										$s1.append($s2.append($s3.append($s4)))
+										$(".ss").append($s1);
+									}
+									
+									$(function() { // 阻止a标签默认行为
+										$(".big-link").click(function(e) {
+											e.preventDefault();
+										})
+
+										// 默认显示7月2日
+										$("#content_tab").find(".div-tab").eq(1).show().siblings().hide();
+										$("#content_tab").find(".div-tab").find(".pull-cont").slideDown("");
+
+									})
+									$("#title_tab div").click(function() {
+										var index = $(this).index();
+										$(this).addClass("title_tab_active").siblings().removeClass("title_tab_active");
+										$("#content_tab").find(".div-tab").eq(index).show().siblings().hide();
+									});
+									//下拉部分状态效果
+									$(".pull-tit").click(function() {
+										var slidekey = $(this).parent().find(".pull-cont").attr('data-s');
+										if(slidekey == 1) {
+											$(this).parent().find(".pull-cont").slideDown("slow");
+											$(this).parent().find(".pull-cont").attr('data-s', '0');
+											$(this).parent().siblings().find(".pull-cont").slideUp();
+											$(this).parent().siblings().find(".pull-cont").attr('data-s', '0');
+											$(this).parent().siblings().find(".pull-tit span").attr('data-t', '0');
+											$(this).parent().siblings().find(".pull-tit span").removeClass('span-active');
+										} else {
+											$(this).parent().find(".pull-cont").slideUp("slow");
+											$(this).parent().find(".pull-cont").attr('data-s', '1');
+										}
+										var spankey = $(this).find('span').attr('data-t');
+										if(spankey == 1) {
+											$(this).find('span').addClass('span-active');
+											$(this).find('span').attr('data-t', '0');
+										} else {
+											$(this).find('span').removeClass('span-active');
+											$(this).find('span').attr('data-t', '1');
+										}
+									})
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>
